@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------------
+|               Cronos v2 — Embedded device on Orange Pi 5 Plus                |
+--------------------------------------------------------------------------------
+Machine: cronos
+Distro: cronos
+Layers:
+  - poky
+  - meta-openembedded (core, python, networking, filesystems)
+  - meta-rockchip (BSP: kernel, u-boot, dtb)
+  - meta-cronos (custom: distro, machine, image, apps)
+  - meta-initramfs (SWUpdate recovery)
+  - meta-swupdate (full-image update): NA
+Rootfs: full-image flash, A/B partitioning: NA
+Update: SWUpdate atomic + rollback: NA
+Init: systemd
+CONF_VERSION: 2
+--------------------------------------------------------------------------------
