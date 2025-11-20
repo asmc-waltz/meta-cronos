@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 |               Cronos v2 — Embedded device on Orange Pi 5 Plus                |
 --------------------------------------------------------------------------------
-Machine: cronos
+Machine: cronos-hw-v2
 Distro: cronos
 Layers:
   - poky
