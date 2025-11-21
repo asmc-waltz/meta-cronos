@@ -1,6 +1,6 @@
 # meta-cronos
 
-This README provides an overview of the `meta-cronos` layer for the Cronos v2 project.
+This README provides an overview of the `meta-cronos` layer for the Cronos project.
 
 It contains information on layer contents, dependencies, maintainership, and usage instructions.
 
@@ -11,16 +11,16 @@ It contains information on layer contents, dependencies, maintainership, and usa
 The `meta-cronos` layer depends on the following super-repo:
 
 - URI: [https://github.com/asmc-waltz/cronos_super](https://github.com/asmc-waltz/cronos_super)
-- Branch: `master` (or the branch corresponding to your Yocto Scarthgap build)
+- Branch: `master` (or the branch corresponding to your Yocto build)
 
 This layer also requires the standard Yocto layers:
 
-- `poky` (Scarthgap branch)
+- `poky`
 - `meta-openembedded/meta-oe`
 - `meta-openembedded/meta-python`
 - `meta-openembedded/meta-networking`
 - `meta-openembedded/meta-filesystems`
-- `meta-rockchip` (Scarthgap branch)
+- `meta-rockchip`
 - Optional: `meta-clang` if building with Clang support
 
 ---
