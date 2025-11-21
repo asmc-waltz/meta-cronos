@@ -1,10 +1,6 @@
 SUMMARY = "Cronos v2 full-image for Orange Pi 5 Plus HW with UI, system manager"
 inherit core-image
 
-IMAGE_CODE = "orion"
-IMAGE_VERSION = "1.0.0"
-IMAGE_NAME = "${DISTRO_NAME_FULL}-${MACHINE_NAME_FULL}-${IMAGE_CODE}-${IMAGE_VERSION}"
-
 #------------------------------- Init system -----------------------------------
 INIT_MANAGER = "systemd"
 IMAGE_INSTALL += " systemd"

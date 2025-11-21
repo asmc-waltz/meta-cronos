@@ -1,0 +1,21 @@
+--------------------------------------------------------------------------------
+Cronos Project — Embedded system on Orange Pi 5 Plus
+--------------------------------------------------------------------------------
+Machine:        orion (Hardware v2)
+Distro:         cronos
+Image:          image-cronos
+
+Layers:
+  - poky
+  - meta-openembedded (core, python, networking, filesystems)
+  - meta-rockchip (BSP: kernel, u-boot, device tree)
+  - meta-cronos (custom: distro, machine, image, applications)
+  - meta-initramfs (SWUpdate recovery)
+  - meta-swupdate (full-image update)
+
+Rootfs:         full-image flash
+Partitions:     A/B (not implemented)
+Update:         SWUpdate atomic + rollback (not implemented)
+Init system:    systemd
+CONF_VERSION:   2
+--------------------------------------------------------------------------------
