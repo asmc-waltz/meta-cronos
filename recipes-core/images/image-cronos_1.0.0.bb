@@ -1,9 +1,8 @@
 SUMMARY = "Cronos v2 full-image for Orange Pi 5 Plus HW with UI, system manager"
 inherit core-image
 
-IMAGE_NAME = "cronos"
 IMAGE_CODE = "orion"
-IMAGE_VERSION = "2.0.0"
+IMAGE_VERSION = "1.0.0"
 
 #------------------------------- Init system -----------------------------------
 INIT_MANAGER = "systemd"
@@ -85,8 +84,8 @@ IMAGE_INSTALL += " evtest"
 IMAGE_INSTALL += " lvgl"
 
 #------------------------------ User Application --------------------------------
-IMAGE_INSTALL += " terminal-ui"
-IMAGE_INSTALL += " sys-mgr"
+# IMAGE_INSTALL += " terminal-ui"
+# IMAGE_INSTALL += " sys-mgr"
 
 #------------------------------ Dev - Debug tools -------------------------------
 IMAGE_INSTALL += " strace"
