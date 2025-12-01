@@ -2,7 +2,7 @@ SUMMARY = "Cronos: Custom base-files and input for profile.d"
 DESCRIPTION = "Provides custom base files and profile.d scripts for Cronos embedded system."
 
 # Extra files path
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:append := "${THISDIR}/files:"
 
 # Source files to install
 SRC_URI += " \
@@ -18,10 +18,10 @@ python do_display_banner() {
 }
 
 # Installation into profile.d
-do_install:append:stm32mpcommon() {
+do_install:append() {
     install -d ${D}${sysconfdir}/profile.d
-    install -m 0644 ${WORKDIR}/console.sh ${D}${sysconfdir}/profile.d/console.sh
-    install -m 0644 ${WORKDIR}/network.sh ${D}${sysconfdir}/profile.d/network.sh
+    install -m 0644 ${UNPACKDIR}/console.sh ${D}${sysconfdir}/profile.d/console.sh
+    install -m 0644 ${UNPACKDIR}/network.sh ${D}${sysconfdir}/profile.d/network.sh
 }
 
 # Add task dependency
