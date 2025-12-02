@@ -76,6 +76,7 @@ IMAGE_INSTALL += " i2c-tools"
 IMAGE_INSTALL += " spidev-test"
 IMAGE_INSTALL += " usbutils"
 IMAGE_INSTALL += " evtest"
+IMAGE_INSTALL += " pciutils"
 
 #------------------------------ GUI package -------------------------------------
 IMAGE_INSTALL += " lvgl"
