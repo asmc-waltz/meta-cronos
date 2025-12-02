@@ -33,6 +33,7 @@ IMAGE_INSTALL += " \
     iproute2 \
     iptables \
     linux-firmware-rtl8821 \
+    linux-firmware-iwlwifi \
 "
 
 #------------------------------ Network ----------------------------------------
