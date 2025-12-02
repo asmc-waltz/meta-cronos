@@ -32,6 +32,7 @@ IMAGE_INSTALL += " \
     traceroute \
     iproute2 \
     nftables \
+    hostapd \
     linux-firmware-rtl8821 \
     linux-firmware-iwlwifi \
 "
