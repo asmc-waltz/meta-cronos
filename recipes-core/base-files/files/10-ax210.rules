@@ -1,0 +1,4 @@
+SUBSYSTEM=="net", ACTION=="add", \
+  ATTR{address}!="", \
+  KERNELS=="0002:21:00.0", \
+  NAME="wlan_sta"

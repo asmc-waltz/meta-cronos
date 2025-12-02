@@ -8,6 +8,8 @@ FILESEXTRAPATHS:append := "${THISDIR}/files:"
 SRC_URI += " \
     file://console.sh \
     file://network.sh \
+    file://10-ax210.rules \
+    file://10-rtl8821.rules \
 "
 
 # Display banner during build
@@ -22,6 +24,12 @@ do_install:append() {
     install -d ${D}${sysconfdir}/profile.d
     install -m 0644 ${UNPACKDIR}/console.sh ${D}${sysconfdir}/profile.d/console.sh
     install -m 0644 ${UNPACKDIR}/network.sh ${D}${sysconfdir}/profile.d/network.sh
+
+    install -d ${D}${sysconfdir}/udev/rules.d
+    install -m 0644 ${UNPACKDIR}/10-ax210.rules \
+        ${D}${sysconfdir}/udev/rules.d/10-ax210.rules
+    install -m 0644 ${UNPACKDIR}/10-rtl8821.rules \
+        ${D}${sysconfdir}/udev/rules.d/10-rtl8821.rules
 }
 
 # Add task dependency
