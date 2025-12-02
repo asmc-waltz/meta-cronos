@@ -1,0 +1,14 @@
+[connection]
+id=eth1
+uuid=165686c7-a9a0-46d0-8006-69dec21d6156
+type=ethernet
+interface-name=eth1
+master=br0
+slave-type=bridge
+autoconnect=true
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=ignore

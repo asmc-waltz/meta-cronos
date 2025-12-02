@@ -1,0 +1,23 @@
+[connection]
+id=uplink-wifi
+uuid=30d3522f-0817-425a-bef8-083a168ba292
+type=wifi
+interface-name=wlan_sta
+autoconnect=true
+autoconnect-priority=200
+
+[wifi]
+ssid=Danh P3
+mode=infrastructure
+band=bg
+hidden=false
+
+[wifi-security]
+key-mgmt=wpa-psk
+psk=10110100101
+
+[ipv4]
+method=auto
+
+[ipv6]
+method=ignore
