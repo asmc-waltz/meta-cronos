@@ -6,6 +6,7 @@ FILESEXTRAPATHS:append := "${THISDIR}/files:"
 
 # Source files to install
 SRC_URI += " \
+    file://90-firewall \
     file://99-unmanaged-devices.conf \
     file://br0.nmconnection \
     file://eth0.nmconnection \
@@ -27,6 +28,10 @@ python do_display_banner() {
 
 # Installation of configuration files
 do_install:append() {
+    install -d ${D}${sysconfdir}/NetworkManager/dispatcher.d
+    install -m 0744 ${UNPACKDIR}/90-firewall \
+        ${D}${sysconfdir}/NetworkManager/dispatcher.d/90-firewall
+
     install -d ${D}${sysconfdir}/NetworkManager/conf.d
     install -m 0644 ${UNPACKDIR}/99-unmanaged-devices.conf \
         ${D}${sysconfdir}/NetworkManager/conf.d/99-unmanaged-devices.conf
