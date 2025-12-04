@@ -6,12 +6,12 @@ FILESEXTRAPATHS:append := "${THISDIR}/files:"
 
 # Source files to install
 SRC_URI += " \
-    file://90-firewall \
-    file://99-unmanaged-devices.conf \
-    file://br0.nmconnection \
-    file://eth0.nmconnection \
-    file://eth1.nmconnection \
-    file://wlan0-uplink.nmconnection \
+    file://dispatcher.d/90-firewall \
+    file://conf.d/99-unmanaged-devices.conf \
+    file://system-connections/br0.nmconnection \
+    file://system-connections/eth0.nmconnection \
+    file://system-connections/eth1.nmconnection \
+    file://system-connections/wlan0-uplink.nmconnection \
 "
 
 # Enable optional NetworkManager features
@@ -29,21 +29,21 @@ python do_display_banner() {
 # Installation of configuration files
 do_install:append() {
     install -d ${D}${sysconfdir}/NetworkManager/dispatcher.d
-    install -m 0744 ${UNPACKDIR}/90-firewall \
+    install -m 0744 ${UNPACKDIR}/dispatcher.d/90-firewall \
         ${D}${sysconfdir}/NetworkManager/dispatcher.d/90-firewall
 
     install -d ${D}${sysconfdir}/NetworkManager/conf.d
-    install -m 0644 ${UNPACKDIR}/99-unmanaged-devices.conf \
+    install -m 0644 ${UNPACKDIR}/conf.d/99-unmanaged-devices.conf \
         ${D}${sysconfdir}/NetworkManager/conf.d/99-unmanaged-devices.conf
 
     install -d ${D}${sysconfdir}/NetworkManager/system-connections
-    install -m 0600 ${UNPACKDIR}/br0.nmconnection \
+    install -m 0600 ${UNPACKDIR}/system-connections/br0.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/br0.nmconnection
-    install -m 0600 ${UNPACKDIR}/eth0.nmconnection \
+    install -m 0600 ${UNPACKDIR}/system-connections/eth0.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/eth0.nmconnection
-    install -m 0600 ${UNPACKDIR}/eth1.nmconnection \
+    install -m 0600 ${UNPACKDIR}/system-connections/eth1.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/eth1.nmconnection
-    install -m 0600 ${UNPACKDIR}/wlan0-uplink.nmconnection \
+    install -m 0600 ${UNPACKDIR}/system-connections/wlan0-uplink.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/wlan0-uplink.nmconnection
 }
 
