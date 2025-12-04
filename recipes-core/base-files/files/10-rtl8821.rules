@@ -1,4 +1,4 @@
 SUBSYSTEM=="net", ACTION=="add", \
   ATTRS{idVendor}=="0bda", \
   ATTRS{idProduct}=="c820", \
-  NAME="wlan1.ap"
+  NAME="wlan1.downlink"
