@@ -1,8 +1,8 @@
 [connection]
-id=br0
+id=br0-lan
 uuid=3eb04698-d762-489b-b7d2-b395fb1a4f95
 type=bridge
-interface-name=br0
+interface-name=br0.lan
 autoconnect=true
 
 [bridge]

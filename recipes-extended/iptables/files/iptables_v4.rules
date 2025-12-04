@@ -2,10 +2,10 @@
 :INPUT ACCEPT [0:0]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [0:0]
--A FORWARD -i br0 -o wlan0.uplink -j ACCEPT
--A FORWARD -i br0 -o wwan0 -j ACCEPT
--A FORWARD -i wlan0.uplink -o br0 -m state --state ESTABLISHED,RELATED -j ACCEPT
--A FORWARD -i wwan0 -o br0 -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A FORWARD -i br0.lan -o wlan0.uplink -j ACCEPT
+-A FORWARD -i br0.lan -o wwan0 -j ACCEPT
+-A FORWARD -i wlan0.uplink -o br0.lan -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A FORWARD -i wwan0 -o br0.lan -m state --state ESTABLISHED,RELATED -j ACCEPT
 COMMIT
 
 *nat

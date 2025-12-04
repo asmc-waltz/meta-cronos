@@ -3,7 +3,7 @@ id=eth0-downlink
 uuid=d92289b8-1bb1-4c08-ac23-df0de9121091
 type=ethernet
 interface-name=eth0
-master=br0
+master=br0.lan
 slave-type=bridge
 autoconnect=true
 
