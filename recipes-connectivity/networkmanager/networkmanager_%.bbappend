@@ -11,7 +11,7 @@ SRC_URI += " \
     file://br0.nmconnection \
     file://eth0.nmconnection \
     file://eth1.nmconnection \
-    file://uplink-wifi.nmconnection \
+    file://wlan0-uplink.nmconnection \
 "
 
 # Enable optional NetworkManager features
@@ -43,8 +43,8 @@ do_install:append() {
         ${D}${sysconfdir}/NetworkManager/system-connections/eth0.nmconnection
     install -m 0600 ${UNPACKDIR}/eth1.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/eth1.nmconnection
-    install -m 0600 ${UNPACKDIR}/uplink-wifi.nmconnection \
-        ${D}${sysconfdir}/NetworkManager/system-connections/uplink-wifi.nmconnection
+    install -m 0600 ${UNPACKDIR}/wlan0-uplink.nmconnection \
+        ${D}${sysconfdir}/NetworkManager/system-connections/wlan0-uplink.nmconnection
 }
 
 # Add task dependency
