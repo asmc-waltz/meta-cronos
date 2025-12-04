@@ -1,0 +1,21 @@
+# Uplink VLAN (candidate) on eth0
+# VLAN ID 4094 chosen for internal WAN detection
+# Interface is created but kept down until selected by Cronos sys-mgr
+
+[connection]
+id=vlan0-uplink
+uuid=45fcbcb6-9f3c-4bad-bfed-42074a042365
+type=vlan
+interface-name=eth0.uplink
+autoconnect=false
+
+[vlan]
+parent=eth0
+id=4094
+
+[ipv4]
+method=auto
+route-metric=10
+
+[ipv6]
+method=ignore

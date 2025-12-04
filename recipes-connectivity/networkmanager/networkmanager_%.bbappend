@@ -10,7 +10,9 @@ SRC_URI += " \
     file://conf.d/99-unmanaged-devices.conf \
     file://system-connections/br0.nmconnection \
     file://system-connections/eth0.nmconnection \
+    file://system-connections/vlan0.nmconnection \
     file://system-connections/eth1.nmconnection \
+    file://system-connections/vlan1.nmconnection \
     file://system-connections/wlan0-uplink.nmconnection \
 "
 
@@ -39,10 +41,17 @@ do_install:append() {
     install -d ${D}${sysconfdir}/NetworkManager/system-connections
     install -m 0600 ${UNPACKDIR}/system-connections/br0.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/br0.nmconnection
+
     install -m 0600 ${UNPACKDIR}/system-connections/eth0.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/eth0.nmconnection
+    install -m 0600 ${UNPACKDIR}/system-connections/vlan0.nmconnection \
+        ${D}${sysconfdir}/NetworkManager/system-connections/vlan0.nmconnection
+
     install -m 0600 ${UNPACKDIR}/system-connections/eth1.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/eth1.nmconnection
+    install -m 0600 ${UNPACKDIR}/system-connections/vlan1.nmconnection \
+        ${D}${sysconfdir}/NetworkManager/system-connections/vlan1.nmconnection
+
     install -m 0600 ${UNPACKDIR}/system-connections/wlan0-uplink.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/wlan0-uplink.nmconnection
 }

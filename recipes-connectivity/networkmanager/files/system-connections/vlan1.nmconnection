@@ -1,0 +1,21 @@
+# Uplink VLAN (candidate) on eth1
+# Used when eth1 receives external uplink
+# VLAN kept down until activated by Cronos sys-mgr
+
+[connection]
+id=vlan1-uplink
+uuid=bf0d5586-5e8f-421c-aeee-f9a81514ca59
+type=vlan
+interface-name=eth1.uplink
+autoconnect=false
+
+[vlan]
+parent=eth1
+id=4094
+
+[ipv4]
+method=auto
+route-metric=10
+
+[ipv6]
+method=ignore
