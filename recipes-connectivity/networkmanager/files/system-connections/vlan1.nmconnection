@@ -6,7 +6,7 @@
 id=vlan1-uplink
 uuid=bf0d5586-5e8f-421c-aeee-f9a81514ca59
 type=vlan
-interface-name=eth1.uplink
+interface-name=vlan1.uplink
 autoconnect=false
 
 [vlan]
