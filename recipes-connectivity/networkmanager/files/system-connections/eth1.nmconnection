@@ -1,5 +1,5 @@
 [connection]
-id=eth1
+id=eth1-downlink
 uuid=165686c7-a9a0-46d0-8006-69dec21d6156
 type=ethernet
 interface-name=eth1
