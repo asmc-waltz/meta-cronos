@@ -1,4 +1,4 @@
 SUBSYSTEM=="net", ACTION=="add", \
     ATTR{address}!="", \
     KERNELS=="0002:21:00.0", \
-    NAME="wlan0.sta"
+    NAME="wlan0.uplink"

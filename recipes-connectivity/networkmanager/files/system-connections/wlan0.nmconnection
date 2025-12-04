@@ -1,8 +1,8 @@
 [connection]
-id=wlan-uplink
+id=wlan0-uplink
 uuid=30d3522f-0817-425a-bef8-083a168ba292
 type=wifi
-interface-name=wlan0.sta
+interface-name=wlan0.uplink
 autoconnect=true
 autoconnect-priority=200
 

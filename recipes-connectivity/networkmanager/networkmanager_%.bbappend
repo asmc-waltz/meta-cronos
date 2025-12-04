@@ -13,7 +13,7 @@ SRC_URI += " \
     file://system-connections/vlan0.nmconnection \
     file://system-connections/eth1.nmconnection \
     file://system-connections/vlan1.nmconnection \
-    file://system-connections/wlan0-uplink.nmconnection \
+    file://system-connections/wlan0.nmconnection \
 "
 
 # Enable optional NetworkManager features
@@ -52,8 +52,8 @@ do_install:append() {
     install -m 0600 ${UNPACKDIR}/system-connections/vlan1.nmconnection \
         ${D}${sysconfdir}/NetworkManager/system-connections/vlan1.nmconnection
 
-    install -m 0600 ${UNPACKDIR}/system-connections/wlan0-uplink.nmconnection \
-        ${D}${sysconfdir}/NetworkManager/system-connections/wlan0-uplink.nmconnection
+    install -m 0600 ${UNPACKDIR}/system-connections/wlan0.nmconnection \
+        ${D}${sysconfdir}/NetworkManager/system-connections/wlan0.nmconnection
 }
 
 # Add task dependency
