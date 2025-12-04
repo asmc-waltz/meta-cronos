@@ -18,6 +18,7 @@ psk=10110100101
 
 [ipv4]
 method=auto
+route-metric=30
 
 [ipv6]
 method=ignore
