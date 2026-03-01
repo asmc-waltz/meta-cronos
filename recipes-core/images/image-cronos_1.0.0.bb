@@ -35,6 +35,7 @@ IMAGE_INSTALL += " \
     hostapd \
     linux-firmware-rtl8821 \
     linux-firmware-iwlwifi \
+    linux-firmware-mali-csffw-arch108 \
 "
 
 #------------------------------ Network ----------------------------------------
