@@ -8,11 +8,15 @@ inherit cmake pkgconfig
 # Dependencies
 DEPENDS = "lvgl libdrm"
 
-SRC_URI = " \
-    git://github.com/asmc-waltz/libcrobj.git;protocol=https;branch=master \
-	"
+# SRC_URI = " \
+#     git://github.com/asmc-waltz/libcrobj.git;protocol=https;branch=master \
+# "
 
-SRCREV = "7c01c78698e3618ceb38f501d5845d60e6158144"
+SRC_URI = " \
+    git:///${TOPDIR}/share/src/libcrobj;protocol=file;branch=master \
+"
+
+SRCREV = "${AUTOREV}"
 
 python do_display_banner() {
     bb.plain("********************************************")
