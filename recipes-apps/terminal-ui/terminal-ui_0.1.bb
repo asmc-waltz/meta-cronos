@@ -5,14 +5,14 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
 inherit cmake pkgconfig
-DEPENDS = "mesa libdrm lvgl libcrobj dbus"
+DEPENDS = "libdrm lvgl libcrobj dbus"
 
 # SRC_URI += "\
 #     git://github.com/asmc-waltz/terminal-ui.git;protocol=https;branch=master \
 # "
 
 SRC_URI = " \
-    git://${TOPDIR}/share/src/terminal-ui;protocol=file;branch=master \
+    git://${TOPDIR}/share/src/terminal-ui/.git;protocol=file;branch=master \
 "
 
 SRCREV = "${AUTOREV}"
@@ -23,12 +23,6 @@ python do_display_banner() {
     bb.plain("********************************************");
 }
 
-# TERMINAL_UI_LOCAL_PATH = "${THISDIR}/../../../sources/terminal-ui"
-# This task has been completed by copying everything from the submodule data.
-# do_unpack() {
-#     cp -r ${TERMINAL_UI_LOCAL_PATH}/* ${S}/
-# }
-#
 S = "${WORKDIR}/git"
 
 do_configure:append() {
