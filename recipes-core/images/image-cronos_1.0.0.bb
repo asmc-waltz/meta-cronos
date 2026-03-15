@@ -87,7 +87,7 @@ IMAGE_INSTALL += " libcrobj"
 
 #------------------------------ User Application --------------------------------
 IMAGE_INSTALL += " terminal-ui"
-# IMAGE_INSTALL += " sys-mgr"
+IMAGE_INSTALL += " sys-mgr"
 
 #------------------------------ Dev - Debug tools -------------------------------
 IMAGE_INSTALL += " strace"
