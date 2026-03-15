@@ -16,7 +16,6 @@ IMAGE_INSTALL += " \
 
 #------------------------------ Library -----------------------------------------
 IMAGE_INSTALL += " alsa-lib"
-IMAGE_INSTALL += " libdrm"
 IMAGE_INSTALL += " libgpiod"
 
 #------------------------------ Network ----------------------------------------
@@ -82,10 +81,12 @@ IMAGE_INSTALL += " evtest"
 IMAGE_INSTALL += " pciutils"
 
 #------------------------------ GUI package -------------------------------------
+IMAGE_INSTALL += " libdrm"
 IMAGE_INSTALL += " lvgl"
+IMAGE_INSTALL += " libcrobj"
 
 #------------------------------ User Application --------------------------------
-# IMAGE_INSTALL += " terminal-ui"
+IMAGE_INSTALL += " terminal-ui"
 # IMAGE_INSTALL += " sys-mgr"
 
 #------------------------------ Dev - Debug tools -------------------------------
