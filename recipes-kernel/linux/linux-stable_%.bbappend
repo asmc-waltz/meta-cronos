@@ -3,7 +3,7 @@ DESCRIPTION = "Provides machine-specific kernel fragment for Orion board."
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-COMPATIBLE_MACHINE:orion= "orion"
+COMPATIBLE_MACHINE:orion = "orion"
 
 SRC_URI:append = " file://rockchip-kmeta;type=kmeta;name=rockchip-kmeta;destsuffix=rockchip-kmeta"
 SRC_URI:append:orion = " file://orion_kernel_fragment.cfg"
