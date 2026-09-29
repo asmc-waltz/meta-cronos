@@ -32,8 +32,6 @@ EXTRA_OECMAKE += " \
     -DCONFIG_LV_USE_PRIVATE_API=ON \
 "
 
-S = "${WORKDIR}/git"
-
 inherit cmake
 
 python do_display_banner() {

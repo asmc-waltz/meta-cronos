@@ -23,8 +23,6 @@ python do_display_banner() {
     bb.plain("********************************************");
 }
 
-S = "${WORKDIR}/git"
-
 do_configure:append() {
     cmake ${S}/ \
       -DCMAKE_SYSROOT=${STAGING_DIR_HOST} \

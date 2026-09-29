@@ -24,9 +24,6 @@ python do_display_banner() {
     bb.plain("********************************************")
 }
 
-# Working source directory
-S = "${WORKDIR}/git"
-
 # Extra CMake configuration flags
 EXTRA_OECMAKE += "-DENABLE_LVGL_BACKEND=ON"
 EXTRA_OECMAKE += "-DCMAKE_INSTALL_PREFIX=/usr"
