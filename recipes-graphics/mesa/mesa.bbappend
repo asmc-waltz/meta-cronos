@@ -5,7 +5,6 @@ inherit pkgconfig
 PACKAGECONFIG:append = " egl"
 PACKAGECONFIG:append = " gles"
 PACKAGECONFIG:append = " gbm"
-PACKAGECONFIG:append = " kmsro"
 PACKAGECONFIG:append = " panfrost"
 
 python do_display_banner() {
