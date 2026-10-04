@@ -1,2 +1,21 @@
-FIXME: Please place here the detailed instructions for using this build configuration.
-They will be shown to the users when they set up their builds via TEMPLATECONF.
+Cronos Yocto Build Environment Setup
+
+For each new build, initialize the Cronos Yocto environment as follows.
+
+- Set the template. From the cronos_super repository:
+    export TEMPLATECONF=meta-cronos/conf/templates/orion
+- Initialize the build environment. Omit <build-folder> to use the default build directory:
+    source openembedded-core/oe-init-build-env <build-folder>
+- Reuse shared caches. To avoid re-downloading sources and rebuilding existing state, link the shared caches into the build directory:
+    ln -s <YOUR_STORAGE_PATH>/sstate-cache sstate-cache
+    ln -s <YOUR_STORAGE_PATH>/downloads downloads
+
+The build directory will then contain:
+
+    build/
+    ├── conf/
+    ├── downloads -> <YOUR_STORAGE_PATH>/downloads
+    ├── sstate-cache -> <YOUR_STORAGE_PATH>/sstate-cache
+    └── tmp/
+
+The build environment is now ready for BitBake.
